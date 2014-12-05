@@ -7,14 +7,14 @@
 require 'csv'
 
 CSV.foreach('../japanese-csv.csv', headers: true) do |row|
-# Tạo shop
+# shop
   shop = Shop.new(:shop_no => row[8],:shop_name => row[9])
   if Shop.find_by_shop_no_and_shop_name(shop.shop_no,shop.shop_name) == nil
     shop.save
     puts shop.id
   else
   end
-  # Tạo location, publisher, genre
+  #location, publisher, genre
   @shop = Shop.find_by_shop_no(row[8])
   location = Location.new(:location_name => row[0], :shop_id => @shop.id)
   if Location.find_by_location_name_and_shop_id(location.location_name, location.shop_id) == nil
