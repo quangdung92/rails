@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 require 'csv'
 
-CSV.foreach('../japanese-csv.csv', headers: true) do |row|
+CSV.foreach('../rails/japanese-csv.csv', headers: true) do |row|
 # shop
   shop = Shop.new(:shop_no => row[8],:shop_name => row[9])
   if Shop.all.include?(shop) == false
