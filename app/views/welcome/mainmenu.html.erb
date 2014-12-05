@@ -1,0 +1,64 @@
+<style>
+	.small-7.columns.small-5.columns {
+		height: 24px;
+	}
+</style>
+<div class="fixed" align="center">
+	<nav class="top-bar" style="background-color: white">
+		<div class="row">
+			<div class="small-8 columns" align="left">
+				<h3><%= current_user.user_id %></h3>
+
+			</div>
+			<div class="small-4 columns" style="padding: 10px">
+				<h6> <%= link_to "Logout", logout_path, {:class => "button [tiny small large] expand" } %>		
+				</h6>
+			</div>
+		</div>
+	</nav>
+	<nav class="top-bar" style="height: 25px;background-color: white; border: 1px solid; border-bottom: 0px" >
+		<div class="small-5 columns" style="border-right: 1px solid #8e8e8e">
+			<h6>Name</h6>
+		</div>
+		<div class="small-7 columns">
+			<h6>ID</h6>
+		</div>
+	</nav>
+	<nav class="top-bar" style="height: 25px;background-color: white; border: 1px solid">
+		<div class="small-5 columns" style="height: 24px; border-right: 1px solid #8e8e8e">
+			<h6>Name</h6>
+		</div>
+		<div class="small-7 columns" style="height: 24px;">
+			<h6>ID</h6>
+		</div>
+	</nav>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row">
+	<div class="medium-10 medium-centered columns">
+		<h3>Main Menu</h3>
+	</div>
+</div>
+<div class="medium-4 medium-centered row" align="center" style="padding: 20px">
+	<div class="medium-10 medium-centered columns">
+		<p>
+			<a href="/welcome/menu" class="button expand"> button 1 </a>
+		</p>
+		<p>
+			<a href="/welcome/menu" class="button expand"> button 2 </a>
+		</p>
+		<p>
+			<a href="/welcome/menu" class="button expand"> button 3 </a>
+		</p>
+		<p>
+			<a href="/welcome/menu" class="button expand"> button 4 </a>
+		</p>
+		<p>
+			<a href="/welcome/menu" class="button expand"> button 5 </a>
+		</p>
+	</div>
+</div>

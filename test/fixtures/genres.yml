@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  genre_name: MyString
+  shop: 
+
+two:
+  genre_name: MyString
+  shop: 

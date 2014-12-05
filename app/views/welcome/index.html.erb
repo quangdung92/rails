@@ -1,0 +1,20 @@
+<div class="medium-4 medium-centered row">
+	<div class="medium-10 medium-centered columns">
+		<h3>Logo</h3>
+		<% if flash[:notice] %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+		<% end %>
+		<%= form_for(:session, url: login_path) do |f| %>
+		<%= f.label :User_ID %>
+		<%= f.text_field :user_id %>
+
+		<%= f.label :Password %>
+		<%= f.password_field :password %>
+		<center>
+			<%= f.submit "Login", class: "button [tiny small large]" %>
+		</center>
+		<% end %>
+	</div>
+</div>

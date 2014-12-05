@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  book_name: MyString
+  location: 
+  author: MyString
+  genre: 
+  shop: 
+  publisher: 
+  price: 1
+  jan: 
+  final_purchase: 2014-11-27
+  final_sale: 2014-11-27
+  sale_number: 1
+  inventory_number: 1
+  nation_sale: 1
+
+two:
+  book_name: MyString
+  location: 
+  author: MyString
+  genre: 
+  shop: 
+  publisher: 
+  price: 1
+  jan: 
+  final_purchase: 2014-11-27
+  final_sale: 2014-11-27
+  sale_number: 1
+  inventory_number: 1
+  nation_sale: 1
