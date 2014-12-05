@@ -14,7 +14,7 @@ CSV.foreach('../japanese-csv.csv', headers: true) do |row|
     puts shop.id
   else
   end
-  #location, publisher, genre
+#location, publisher, genre
   @shop = Shop.find_by_shop_no(row[8])
   location = Location.new(:location_name => row[0], :shop_id => @shop.id)
   if Location.find_by_location_name_and_shop_id(location.location_name, location.shop_id) == nil
@@ -34,7 +34,7 @@ CSV.foreach('../japanese-csv.csv', headers: true) do |row|
   else
   end
 
-  # Book
+ # Book
   @location = Location.find_by_location_name_and_shop_id(row[0],@shop.id)
   @publisher = Publisher.find_by_publisher_name_and_shop_id(row[5],@shop.id)
   @genre = Genre.find_by_genre_name_and_shop_id(row[1],@shop.id)
