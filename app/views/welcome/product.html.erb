@@ -67,7 +67,7 @@
 			<%= item.book_name%>
 		</div>
 		<div class="small-2 columns" style="border: 1px solid #8e8e8e">
-			<div class="row" style="background-color: #ffa500; padding-left: 2px">				
+			<div class="row" style="background-color: #e1b2a5; padding-left: 2px" align="center">				
 				<%= "%04d" % n +=  1 %>
 			</div>
 			<div class="row">
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row" style="background-color: #ffd1e3; border: 1px solid;"  >
+	<div class="row" style="background-color: #f5ecff; border: 1px solid;"  >
 		<div class="small-8 columns">
 			<%= item.author%>
 		</div>
@@ -86,7 +86,7 @@
 			<%end%>
 		</div>
 	</div>
-	<div class="row" style="background-color: #e5bccc; border: 1px solid ;">
+	<div class="row" style="background-color: #e6d9f0; border: 1px solid ;">
 		<div class="small-3 columns">
 			<%if item.publish_date%>
 			<%= item.publish_date.strftime("%y/%m/%d")%>
@@ -99,10 +99,10 @@
 			&yen;<%= item.price%>
 		</div>
 	</div>
-	<div class="row" style="background-color: #ffd1e3; border: 1px solid;"  >
+	<div class="row" style="background-color: #f5ecff; border: 1px solid;"  >
 		No:
 	</div>
-	<div class="row" style="background-color: #e5bccc; border: 1px solid;"  >
+	<div class="row" style="background-color: #e6d9f0; border: 1px solid;"  >
 		<div class="small-6 columns">
 			<%if item.final_purchase%>
 			<%= item.final_purchase.strftime("%y/%m/%d")%>
@@ -114,7 +114,7 @@
 			<%end%>
 		</div>
 	</div>
-	<div class="row" style="background-color: #ffd1e3; border: 1px solid;"  >
+	<div class="row" style="background-color: #f5ecff; border: 1px solid;"  >
 		<div class="small-6 columns">
 			<%= item.inventory_number%>
 		</div>
@@ -123,7 +123,7 @@
 		</div>
 	</div>
 
-	<div class="row" style="background-color: #e5bccc; border: 1px solid; margin-bottom: 5px"  >
+	<div class="row" style="background-color: #e6d9f0; border: 1px solid; margin-bottom: 5px"  >
 		<div class="small-6 columns">
 			<% @location = Location.where(:id => item.location_id)%>
 			<% @location.each do |i| %>
