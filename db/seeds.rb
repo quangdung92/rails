@@ -9,27 +9,26 @@ require 'csv'
 CSV.foreach('../japanese-csv.csv', headers: true) do |row|
 # shop
   shop = Shop.new(:shop_no => row[8],:shop_name => row[9])
-  if Shop.find_by_shop_no_and_shop_name(shop.shop_no,shop.shop_name) == nil
+  if Shop.all.include?(shop) == false
     shop.save
-    puts shop.id
   else
   end
 #location, publisher, genre
   @shop = Shop.find_by_shop_no(row[8])
   location = Location.new(:location_name => row[0], :shop_id => @shop.id)
-  if Location.find_by_location_name_and_shop_id(location.location_name, location.shop_id) == nil
+  if Location.all.include?(location) == false
   location.save
   else
   end
 
   genre = Genre.new(:genre_name => row[1], :shop_id => @shop.id)
-  if Genre.find_by_genre_name_and_shop_id(genre.genre_name, genre.shop_id) == nil
+  if Genre.all.include?(genre) == false
   genre.save
   else
   end
 
   publisher = Publisher.new(:publisher_name => row[5], :shop_id => @shop.id)
-  if Publisher.find_by_publisher_name_and_shop_id(publisher.publisher_name, publisher.shop_id) == nil
+  if Publisher.all.include?(publisher) == false
   publisher.save
   else
   end
