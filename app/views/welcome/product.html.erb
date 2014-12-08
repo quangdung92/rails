@@ -1,8 +1,8 @@
 <script type="text/javascript">
 	function onClickHandler(elem) {
 		elem.style.backgroundImage = "url('/assets/check.png')";
-		elem.style.backgroundRepeat="no-repeat";
-		elem.style.backgroundPosition="center";
+		elem.style.backgroundRepeat = "no-repeat";
+		elem.style.backgroundPosition = "center";
 	}
 </script>
 <style>
@@ -11,7 +11,8 @@
 	}
 	.small-3.columns {
 		height: 24px;
-		border-right: 1px solid #8e8e8e;
+		border-right: 2px solid #8e8e8e;
+		padding: 0px;
 	}
 	.count:before {
 		counter-increment: section;
@@ -34,17 +35,23 @@
 </style>
 <div class="fixed" align="center">
 	<nav class="top-bar" style="height: 25px">
-		<div class="small-3 columns">
-			<h6><%= current_user.name%></h6>
+		<div class="small-3 columns" >
+			<h6>
+				<i class="step fi-address-book size-12" style="color: white"></i>
+				<%= current_user.name%></h6>
+		</div>
+		<div class="small-3 columns" >
+			<h6><i class="step fi-home size-15" style="color: white"></i>
+				<%= current_user.shop_no%></h6>
 		</div>
 		<div class="small-3 columns">
-			<h6><%= current_user.shop_no%></h6>
-		</div>
-		<div class="small-3 columns">
-			<h6><%= current_user.user_id.from(-4)%></h6>
+			<h6><i class="step fi-torso size-12" style="color: white"></i>
+				<%= current_user.user_id.from(-4)%></h6>
 		</div>
 		<div class="small-3 columns" style="border-right: 0px">
-			<h6><%= current_user.created_at.strftime("%y/%m/%d")%></h6>
+			
+			<h6><i class="step fi-calendar size-15" style="color: white"></i>
+				<%= current_user.created_at.strftime("%y/%m/%d")%></h6>
 		</div>
 	</nav>
 	<nav class="top-bar" style="background-color: #646478; height: 40px">
@@ -67,7 +74,7 @@
 			<%= item.book_name%>
 		</div>
 		<div class="small-2 columns" style="border: 1px solid #8e8e8e">
-			<div class="row" style="background-color: #e1b2a5; padding-left: 2px" align="center">				
+			<div class="row" style="background-color: #e1b2a5; padding-left: 2px" align="center">
 				<%= "%04d" % n +=  1 %>
 			</div>
 			<div class="row">
