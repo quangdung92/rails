@@ -4,21 +4,21 @@
 	}
 </style>
 <br />
-	<div class="medium-4 medium-centered row" style="padding: 30px;">
+	<div class="medium-4 medium-centered row" style="padding: 30px;border: 1px solid">
 		<div class="medium-10 medium-centered columns" align="center" style="background-color: white; border-radius: 5px 5px; padding: 10px">
 			<h3 id="here">Menu Save</h3>
-			
+
 			<p>
 				<h6> <%= link_to "ロケーション", {:controller => "welcome", :action => "select", :link_name => "location" },
-									 {:class => "button expand" } %></h6>
+				{:class => "button expand" } %></h6>
 			</p>
 			<p>
 				<h6> <%= link_to "大分類", {:controller => "welcome", :action => "select", :link_name => "genre" },
-									 {:class => "button expand" } %></h6>
+				{:class => "button expand" } %></h6>
 			</p>
 			<p>
 				<h6> <%= link_to "出版社", {:controller => "welcome", :action => "select", :link_name => "publisher" },
-									 {:class => "button expand" } %></h6>
+				{:class => "button expand" } %></h6>
 				</a>
 
 			</p>
@@ -27,4 +27,3 @@
 			</a>
 		</div>
 	</div>
-</body>
